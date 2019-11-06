@@ -39,6 +39,10 @@ def choose_tic():
         coords = input("Where do you want to set your piece? 'x,y': ")
         coords = coords.split(",")
 
+        if len(coords) != 2:
+            print("Please input two numbers only. Try again...")
+            continue
+
         #check if the input is a legal move
         try:
             coords = [int(coord) for coord in coords]
